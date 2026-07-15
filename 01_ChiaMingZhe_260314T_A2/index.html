@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Editing</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>Video Editing</h1>
+	</header>
+	<nav> <!--menu system-->
+		<ul>
+			<li><button id="infoquiz">About Video Editing</button></li>
+			<li><button id="page2btn">Editing Techniques</button></li>
+			<li><button id="page3btn">Visual and Audio Enhancement</button></li>
+		</ul>
+	</nav>
+	<main id="pagecontainer">
+		<section class="page" id="page1">
+		<h1>What is Video Editing?</h1>
+		<p>Video editing is the process of selecting, arranging and improving video clips to create a clear and meaningful final product.</p>
+		<p>It can involve cutting out unnecessary parts, adding music, text, transitions, sound effects and visual effects.</p>
+		<p>However, video editing is not only about making a video look attractive.</p>
+		<p>A good editor also decides how information should be presented so that the audience can understand and stay interested in the message.</p>
+		<h1>Why is this a somewhat essential lifeskill?</h1>
+		<p>Video editing has become a somewhat essential life skill because videos are now widely used for communication, education and work.</p>
+		<p>Students may need to create video presentations for school projects, while employees may use videos for training, advertising or sharing information.</p>
+		<p>Knowing basic video editing skills allows a person to communicate ideas more clearly and creatively.</p>
+		<p>Learning video editing also develops useful skills such as creativity, organisation and critical thinking.</p>
+		<h1>What are some good free video editing apps?</h1>
+		<h2>Based on personal experience, good free video editing apps are:</h2>
+		<ol>
+			<li>Davinci Resolve</li>
+			<li>CapCut</li>
+			<li>Flimora</li>
+		</ol>
+		<section class="cls-beige">
+		<h1>MCQ Quiz</h1>
+		<fieldset>
+			<legend>1. Video Editing is?</legend>
+			<input type="radio" name="q1" value="Videos"> The craft or art of portraying a character through speech, movement, emotion, and behavior in a performance.
+			<input type="radio" name="q1" value="Vivlos"> A useless and non educational terrible life skill.
+			<input type="radio" name="q1" value="idklol"> The process of selecting, arranging and improving video clips to create a clear and meaningful final product.
+			<input type="radio" name="q1" value="Vidclose"> The process of creating the illusion of movement by displaying a sequence of images or frames. 
+		</fieldset>
+		<fieldset>
+			<legend>2. Skills from learning Video Editing:</legend>
+			<input type="radio" name="q2" value="wow"> Creativity, Organisation and Critical Thinking.
+			<input type="radio" name="q2" value="obvnot"> Self Discipline, Overthinking and Procastination.
+			<input type="radio" name="q2" value="igthatkindamakesense"> Integrity, Resilence and Overconfidence.
+			<input type="radio" name="q2" value="whywouldthisbecorrect"> Selfishness, Organisation and Greediness.
+		</fieldset>
+		<fieldset>
+			<legend>3. Which editing app is NOT mentioned?</legend>
+			<input type="radio" name="q3" value="CapCut"> CapCut
+			<input type="radio" name="q3" value="Power Director"> Power Director
+			<input type="radio" name="q3" value="Flimora"> Flimora
+			<input type="radio" name="q3" value="Davinci Resolve"> Davinci Resolve
+		</fieldset>
+		<button id="btnSubmit">Submit Quiz</button>
+		<h3 id="scorebox">Not submitted</h3>
+		<script>
+		const btnSubmit=document.querySelector("#btnSubmit");  
+		const scorebox=document.querySelector("#scorebox");
+		var q1,q2,score=0;
+		corrAnsArray=["idklol","wow","Power Director"];
+		function CheckAns(){    
+			score=0; //reset score to 0, check ans and give score if correct 
+			for(let i=0;i<corrAnsArray.length;i++){
+				CheckOneQn(i+1,corrAnsArray[i]);
+			}
+			scorebox.innerHTML="Score:"+score;
+		}
+		btnSubmit.addEventListener("click",CheckAns);
+		function CheckOneQn(qnNo,CorrAns){
+			qTemp=document.querySelector("input[name='q"+qnNo+"']:checked").value;
+			if(qTemp==CorrAns)score++;
+			console.log(qTemp); //check q1 value retrieved
+		}
+		</script>
+		</section>
+		</section>
+		<section class="page" id="page2">
+		page 2 content
+		</section>
+		<section class="page" id="page3">
+		page 3 content
+		</section>
+	</main>
+</body>
+</html>
