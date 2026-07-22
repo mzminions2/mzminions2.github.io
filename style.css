@@ -1,0 +1,9 @@
+.page{width:100vw;height:100vh;border:2px gold}
+nav ul li{display:inline;}
+#page1{background:lightgreen}
+#page2{background:snow}
+#page3{background:paleturquoise}
+section.cls-beige{background:beige;}
+.responsiveimg {
+max-width: 100%;
+}
